@@ -1,0 +1,57 @@
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* button style */
+.accordion {
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  transition: background-color 0.6s ease;
+}
+
+/* bg color for the button if it's clicked. add the active class with JS*/
+.accordion.hover,
+.active {
+  background-color: #ccc;
+}
+
+/* accordion content title */
+.accordion__title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* accordion icon */
+.accordion_icon {
+  margin-right: 10px;
+  transition: transform 0.6 ease;
+}
+
+/* style to rotate icon when state is active */
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* style the accordion content panel (hidden by default) */
+.accordion__content {
+  background-color: #fff;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+  /* max-height: ; */
+}
+
+/* accordion content text */
+.accordion__text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 18px;
+}

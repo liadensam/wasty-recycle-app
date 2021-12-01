@@ -1,0 +1,7 @@
+.recycle--buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  height: 40vh;
+  width: 100vw;
+}

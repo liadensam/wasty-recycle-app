@@ -1,0 +1,59 @@
+footer {
+  display: flex;
+  justify-content: flex-end;
+  background-color: lightgray;
+  height: 10vh;
+}
+
+.menu {
+  position: fixed;
+}
+
+.menu--buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu__btn {
+  background-color: transparent;
+  background-image: url(./img/recycle-2.svg);
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.75rem;
+  border: none;
+  cursor: pointer;
+}
+
+.menu__btn--home {
+  background-color: transparent;
+  background-image: url(./img/home.svg);
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.75rem;
+  border: none;
+  cursor: pointer;
+}
+
+.menu__items {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightgray;
+  padding: 1rem;
+  /* margin-top: 0.75rem; */
+  position: relative;
+  width: 100vw;
+  transform: translateY(-215px);
+}
+
+.menu--closed .menu__items {
+  display: none;
+}
+
+.menu-item {
+  display: block;
+  margin: 0.5rem;
+  text-decoration: none;
+}

@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
 
-function App() {
+import Home from './components/Home';
+import Map from './components/Map';
+import About from './components/About';
+import Faq from './components/FAQ';
+import Contact from './components/Contact';
+import Intro from './components/Intro';
+import Tips from './components/Tips';
+
+
+import './style.css';
+import { tipsArray } from './components/Tips/tipsArray';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Intro />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/map" element={<Map/>} />
+        <Route path="/about" element={<About />} />
+        <Route path="/faq" element={<Faq 
+        title="Question1" 
+        content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"/>} 
+        />
+        <Route path="/tips" element={<Tips tipsArray = {tipsArray}/>} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
