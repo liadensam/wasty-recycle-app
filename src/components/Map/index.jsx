@@ -48,6 +48,7 @@ function Map() {
 
   return (
     <>
+    <header><Menu /></header>
     <div>
 
     <div className="sidebar">
@@ -66,7 +67,6 @@ function Map() {
       <button></button>
       <button></button>
     </div>
-    <footer><Menu /></footer>
     </>
   );
 }

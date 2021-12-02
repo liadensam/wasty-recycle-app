@@ -14,9 +14,9 @@ const Menu = () => {
 
   const navigate = useNavigate();
 
-  const redirectToMap = () => {
+  const redirectToHome = () => {
 
-    navigate('/map')
+    navigate('/home')
   }
 
   
@@ -26,8 +26,7 @@ const Menu = () => {
 
         <div className={menuOpened === true? "menu" : "menu menu--closed"}>
           <div className="menu--buttons" >
-          <button className="menu__btn--home" onClick={handleClick}></button>
-          <button className="menu__btn" onClick={redirectToMap}></button>
+          <button className="menu__btn--home" onClick={redirectToHome}></button>
 
           <Hamburger className="menu__icon" direction="left" size={30} duration={0.4} distance="md" color="#000" rounded label="Show menu" 
                 onToggle={handleClick}/>

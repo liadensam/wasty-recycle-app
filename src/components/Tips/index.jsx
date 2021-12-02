@@ -7,6 +7,7 @@ const Tips = ({tipsArray}) => {
 
 	return (
     <>
+    <header><Menu/></header>
 		<main>
       {tipsArray.map((tip, index) => 
         <Tip
@@ -17,7 +18,6 @@ const Tips = ({tipsArray}) => {
 
 		</main>
 
-    <footer><Menu/></footer>
     </>
 	);
 }

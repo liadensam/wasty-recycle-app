@@ -1,4 +1,4 @@
-footer {
+header {
   display: flex;
   justify-content: flex-end;
   background-color: lightgray;
@@ -45,7 +45,7 @@ footer {
   /* margin-top: 0.75rem; */
   position: relative;
   width: 100vw;
-  transform: translateY(-215px);
+  transform: translateY(1vh);
 }
 
 .menu--closed .menu__items {

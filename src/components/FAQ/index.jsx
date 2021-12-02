@@ -35,6 +35,7 @@ const Faq = (props) => {
 
     return (
       <>
+        <header><Menu /></header>
         <div className="accordion__section">
             <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
                 <AiOutlineArrowDown className={`${setRotate}`} />
@@ -49,7 +50,7 @@ const Faq = (props) => {
                     
             </div>
         </div>
-        <footer><Menu /></footer>
+
       </>
     )
 }
