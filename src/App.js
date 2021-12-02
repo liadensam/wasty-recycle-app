@@ -12,6 +12,7 @@ import Faq from './components/FAQ';
 import Contact from './components/Contact';
 import Intro from './components/Intro';
 import Tips from './components/Tips';
+import Directions from './components/Directions';
 
 
 import './style.css';
@@ -31,6 +32,7 @@ const App = () => {
         />
         <Route path="/tips" element={<Tips tipsArray = {tipsArray}/>} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/directions" element={<Directions />} />
       </Routes>
     </BrowserRouter>
   );
