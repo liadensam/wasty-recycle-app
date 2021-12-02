@@ -21,10 +21,8 @@ const Directions = () =>{
     <>
     <header><Menu /></header>
     <main>
-      <div className="button">
-    <button className="button__item" onClick={redirectToGoogle}>Get Directions</button>
-    </div>
     </main>
+    <button className="button__item" onClick={redirectToGoogle}>Get Directions</button>
     </>
   );
 }
