@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState} from 'react';
+import { useNavigate } from 'react-router';
 
 import './style.css';
 import Menu from '../../components/Menu';
@@ -10,7 +11,15 @@ const token = process.env.REACT_APP_MAP_TOKEN
 mapboxgl.accessToken = token
 
 
-function Map() {
+const Map = () =>{
+
+  
+  const navigate = useNavigate();
+  
+  const redirectToDirections = () => {
+  
+    navigate('/directions')
+  }
 
 
   //set up app's default state
@@ -20,6 +29,7 @@ function Map() {
   const [lng, setLng] = useState( -21.9265);
   const [lat, setLat] = useState(64.1420);
   const [zoom, setZoom] = useState(10.5);
+
 
 
   // initialising map on it's default state ^^
@@ -49,8 +59,8 @@ function Map() {
   return (
     <>
     <header><Menu /></header>
+    <main>
     <div>
-
     <div className="sidebar">
       Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
     </div> 
@@ -67,6 +77,8 @@ function Map() {
       <button></button>
       <button></button>
     </div>
+    </main>
+    <button className="button--find" onClick={redirectToDirections}>Find</button>
     </>
   );
 }

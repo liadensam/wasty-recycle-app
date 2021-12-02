@@ -22,4 +22,10 @@
   gap: 0.5rem;
   height: 40vh;
   width: 100vw;
+  margin-bottom: 0.5rem;
+}
+
+.button--find {
+  height: 5vh;
+  width: 100vw;
 }
