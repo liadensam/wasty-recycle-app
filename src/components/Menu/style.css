@@ -2,6 +2,10 @@ header {
   display: flex;
   justify-content: flex-end;
   background-color: lightgray;
+  background-color: transparent;
+  background-image: url("./img/wave-bcg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 10vh;
 }
 
