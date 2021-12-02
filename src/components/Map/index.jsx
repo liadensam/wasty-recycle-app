@@ -78,7 +78,7 @@ const Map = () =>{
       <button></button>
     </div>
     </main>
-    <button className="button--find" onClick={redirectToDirections}>Find</button>
+    <footer><button className="button--find" onClick={redirectToDirections}>Find</button></footer>
     </>
   );
 }

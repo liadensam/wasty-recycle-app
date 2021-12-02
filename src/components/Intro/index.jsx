@@ -16,10 +16,10 @@ const handleClick = () => {
   // navigate('/reviews', {replace=true})
   return (
     <>
-    <header><button onClick={handleClick}>Navigate to HOME</button></header>
-    <div className="intro">
-      <h2>Intro</h2>
+      <div className="intro">
     </div>
+    <footer><button className="button--start" onClick={handleClick}>Get started</button></footer>
+ 
     </>
   );
 }

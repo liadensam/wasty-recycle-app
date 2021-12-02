@@ -3,3 +3,8 @@
   background-repeat: no-repeat;
   height: 90vh;
 }
+
+.button--start {
+  width: 100vw;
+  height: 10vh;
+}

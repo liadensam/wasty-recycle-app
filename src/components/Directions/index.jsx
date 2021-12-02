@@ -22,7 +22,7 @@ const Directions = () =>{
     <header><Menu /></header>
     <main>
     </main>
-    <button className="button__item" onClick={redirectToGoogle}>Get Directions</button>
+    <footer><button className="button__item" onClick={redirectToGoogle}>Get Directions</button></footer>
     </>
   );
 }
