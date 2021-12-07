@@ -109,7 +109,7 @@ const Map = () =>{
 
 	return(
     <>
-    <header><Menu /></header>
+    <Menu />
     <main>
     <ReactMapGL
 		{...viewport}
@@ -154,7 +154,7 @@ const Map = () =>{
 
 
   <div className="navigation">
-    <NavigationControl />
+    <NavigationControl className="navigation__item" />
     <GeolocateControl />
   </div>
     

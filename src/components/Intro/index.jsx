@@ -9,7 +9,7 @@ const navigate = useNavigate();
 
 const handleClick = () => {
 
-  navigate('/home')
+  navigate('/introslides')
 }
 
   //second parameter is for replacing the history, just the last step (we cannot return back by arrow)

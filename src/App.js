@@ -13,6 +13,7 @@ import Contact from './components/Contact';
 import Intro from './components/Intro';
 import Tips from './components/Tips';
 import Directions from './components/Directions';
+import IntroSlides from './components/IntroSlides'
 
 
 import './style.css';
@@ -23,6 +24,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Intro />} />
+        <Route path="/introslides" element={<IntroSlides />} />
         <Route path="/home" element={<Home />} />
         <Route path="/map" element={<Map/>} />
         <Route path="/about" element={<About />} />

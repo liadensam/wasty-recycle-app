@@ -19,7 +19,7 @@ const Home = () => {
 
 	return (
     <>
-    <header><Menu /></header>
+    <Menu />
 		<main>
 			<h2>Home</h2>
       <img className="avatar" src={avatar} alt="avatar" />
