@@ -11,7 +11,7 @@ header {
   position: relative;
 }
 
-.menu__btn {
+/* .menu__btn {
   background-color: transparent;
   background-image: url(./img/recycle-2.svg);
   background-size: cover;
@@ -31,7 +31,7 @@ header {
   margin: 0.75rem;
   border: none;
   cursor: pointer;
-}
+} */
 
 .menu__items {
   display: flex;
