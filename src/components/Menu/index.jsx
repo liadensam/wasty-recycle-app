@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { Turn as Hamburger } from 'hamburger-react'
 
 
-import './style.css'
+import './style.scss'
 
 const Menu = () => {
 

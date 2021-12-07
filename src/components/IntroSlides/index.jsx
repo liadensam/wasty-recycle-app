@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SliderContent from "./SliderContent";
 import Dots from "./Dots";
-import "./style.css";
+import "./style.scss";
 import { NavLink } from "react-router-dom";
 import {imgData} from './utils/data'
 

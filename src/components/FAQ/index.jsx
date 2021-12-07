@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import './style.css'
+import './style.scss'
 
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import Menu from '../../components/Menu';
