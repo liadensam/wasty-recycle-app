@@ -7,7 +7,7 @@ const Tips = ({tipsArray}) => {
 
 	return (
     <>
-    <header><Menu/></header>
+    <Menu/>
 		<main>
       {tipsArray.map((tip, index) => 
         <Tip

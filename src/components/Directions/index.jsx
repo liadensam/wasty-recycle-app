@@ -19,7 +19,7 @@ const Directions = () =>{
   
   return (
     <>
-    <header><Menu /></header>
+    <Menu />
     <main>
     </main>
     <footer><button className="button__item" onClick={redirectToGoogle}>Get Directions</button></footer>
