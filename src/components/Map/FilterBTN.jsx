@@ -3,14 +3,14 @@ import React from 'react'
 const FilterBTN = ({item,index,handleFilters,active}) => {
     return (
         <div key ={index}>
-            {/* <style jsx>
+            <style jsx>
     {`
       .filter-checkbox:checked + label {
         background-color: rgba(73, 73, 73, 0.747);
         color: white }
       input[type="checkbox"] { display: none; }
     `}
-  </style> */}
+  </style>
   <input
             className="filter-checkbox"
             type="checkbox"
