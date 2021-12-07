@@ -6,6 +6,10 @@ import {MdIcecream} from 'react-icons/md'
 import {MdLocalParking} from 'react-icons/md'
 // import {MdLocalCafe} from 'react-icons/md'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import ShowMarkers from './ShowMarkers';
+import TrashTypes from './TrashTypes';
+import BinInfo from './BinInfo';
+import { FlyToInterpolator } from 'react-map-gl';
 
 // import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
@@ -54,64 +58,123 @@ const Map = () =>{
     navigate('/directions')
   }
 
-
+const [popupInfo,setPopupInfo] = useState(null)
   const [popupOpen, setPopupOpen] = useState(false)
   // const [toggleIcon, setToggleIcon] = useState(false)
   const [open, setOpen] = useState(true)
   const [bins, setBins] = useState([]);
+  const [filteredBins, setFilteredBins] = useState([])
+  const [filterArray,setFilterArray] = useState([])
 
-  // const filterBins =(e) => {
-  //   console.log(e.target.value)
-  // }
 
+
+  
   // const [dragIcon, setDragIcon] = useState({
-  //   latitude: 50.08147136893371,
-  //   longitude: 14.427310912961879,
-  // })
+    //   latitude: 50.08147136893371,
+    //   longitude: 14.427310912961879,
+    // })
+    
+    const [viewport, setViewport] = useState({
+      latitude: 64.12914739924277,
+      longitude: -21.918358129291008,
+      zoom: 11,
+    })
+    
+    // useEffect (
+      //   () => {
+        //     fetch("https://lukrgatt.reykjavik.is/server/rest/services/OpinGognThjonusta/Endurvinnslugamar/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json")
+        //     .then(response => response.json())
+        //     .then(data => {
+          //       console.log(data)
+          //     })
+          //   },
+          //   []
+          // );
+          
+          
+          const fetchBins = () => {
+            fetch(geoJsonUrl)
+            .then(response => response.json())
+            .then(data => {
+              //  setBins(data)
+              
+              setFilteredBins(data.features.map((bin)=>{
+                const result = 
+                {name:bin.properties.NAFN,
+                  metal:bin.properties.MALMAR,
+                  plastic:bin.properties.PLAST,
+                  paper:bin.properties.PAPPIR,
+                  bottles:bin.properties.FLOSKUR,
+                  glass:bin.properties.GLER,
+                  clothes:bin.properties.FOT,
+                  geometry:bin.geometry.coordinates
+                }//bin object
+                
+                
+                return result
+              }//map function 
+              )//map
+              
+              )//set FilteredBins array
+              setBins(data.features.map((bin)=>{
+                const result = 
+                {name:bin.properties.NAFN,
+                  metal:bin.properties.MALMAR,
+                  plastic:bin.properties.PLAST,
+                  paper:bin.properties.PAPPIR,
+                  bottles:bin.properties.FLOSKUR,
+                  glass:bin.properties.GLER,
+                  clothes:bin.properties.FOT,
+                  geometry:bin.geometry.coordinates
+                }//bin object
+                
+                
+                return result
+              }//map function 
+              )//map
+              
+              )//set FilteredBins array
+            })
+            
+          }
+          
+          
+          
+          useEffect(() => {
+            fetchBins();
+            
+          }, []);
+          
+          const handleFilters =(event)=> {
+              const {id,name,checked}=event.target
+          
+          
+            setFilterArray((previousFilters)=>{
+             return(  previousFilters.indexOf(name)>-1 ? previousFilters.filter(filter => filter!==name) : [...previousFilters, name])
+            }) //setFilterArray
+                    
 
-  const [viewport, setViewport] = useState({
-    latitude: 64.12914739924277,
-    longitude: -21.918358129291008,
-    zoom: 11,
-  })
+          }//handleFilters
+          
+          useEffect(() => {
+            if(filterArray.length) {   //if there are any filters checked
+            setFilteredBins(
+              bins.filter(bin=>     //filter all bin locations
+                filterArray.every(material=> // by checking every filter category name
+                  bin[material]>1))         // checking if the value of the property with this material name is bigger than 1 
 
-  // useEffect (
-  //   () => {
-  //     fetch("https://lukrgatt.reykjavik.is/server/rest/services/OpinGognThjonusta/Endurvinnslugamar/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json")
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       console.log(data)
-  //     })
-  //   },
-  //   []
-  // );
+                    //bigger than one since all the values somehow are higher than 1 and just to prove that filtering works
+
+            )} else{setFilteredBins(bins)}    //if there are no filters chosen - return all bin locations
+          }, [filterArray])
 
 
-  const fetchBins = () => {
-    fetch(geoJsonUrl)
-      .then(response => response.json())
-      .then(data => {
-      console.log(data);
-      //  setBins(data)
-       setBins({features: data['features'], isLoading: false})
-      })
-  }
-
-
-  
-  useEffect(() => {
-    fetchBins();
-  }, []);
-
-  
-
-
-
-	return(
-    <>
+          return(
+            <>
     <header><Menu /></header>
     <main>
     <ReactMapGL
+    transitionDuration={1300} transitionInterpolator={new FlyToInterpolator()}
 		{...viewport}
 		width="100vw"
 		height={400}
@@ -171,7 +234,34 @@ const Map = () =>{
       
     </Marker>
 
-    {bins.features?.map(bin => ( 
+{/*  Rendering Filtred Markers (start with no filter)  */}
+
+
+  {filteredBins ? <ShowMarkers 
+            data={filteredBins}
+            onClick={setPopupInfo}
+            setViewport={setViewport} />: 
+            <div className="map-alert">
+              {`We are sorry! 
+              There are no locations found`}
+            </div>}
+ 
+            {popupInfo && (
+          <Popup
+            tipSize={5}
+            anchor="top"
+            longitude={popupInfo.geometry[0]}
+            latitude={popupInfo.geometry[1]}
+            closeOnClick={true}
+            onClose={setPopupInfo}
+          >
+            <BinInfo info={popupInfo} />
+          </Popup>
+        )}
+
+
+
+    {/* {bins.features?.map(bin => ( 
     <Marker
     key={bin.id}
     latitude={bin.geometry.coordinates[1]}
@@ -185,7 +275,7 @@ const Map = () =>{
       </a>
     </Marker>
     
-      ))}
+      ))} */}
 
 
     {/* <Marker 
@@ -249,7 +339,10 @@ const Map = () =>{
       >
         {open ? 'show' : 'hide'} bins
     </button>
-      <button></button>
+    
+
+      <TrashTypes handleFilters={handleFilters}/>
+      <button onClick={handleFilters}></button>
       <button></button>
       <button></button>
       <button></button>
