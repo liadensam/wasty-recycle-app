@@ -6,7 +6,7 @@ import ShowMarkers from './ShowMarkers';
 import TrashTypes from './TrashTypes';
 import BinInfo from './BinInfo';
 import Menu from '../../components/Menu';
-import './style.css'
+import './style.scss'
 // import { accessToken } from 'mapbox-gl';
 
 // const token = process.env.REACT_APP_MAP_TOKEN
@@ -118,6 +118,7 @@ const Map = () => {
 
       )
     } else { setFilteredBins(bins) }    //if there are no filters chosen - return all bin locations
+    // eslint-disable-next-line
   }, [filterArray])
 
 

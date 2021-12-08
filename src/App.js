@@ -16,7 +16,7 @@ import Directions from './components/Directions';
 import IntroSlides from './components/IntroSlides'
 
 
-import './style.css';
+import './style.scss';
 import { tipsArray } from './components/Tips/tipsArray';
 
 const App = () => {

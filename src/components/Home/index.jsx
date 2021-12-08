@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-import './style.css'
+import './style.scss'
 
 import avatar from './img/avatar.svg'
 

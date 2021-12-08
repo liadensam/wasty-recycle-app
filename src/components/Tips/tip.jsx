@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import './style.css'
+import './style.scss'
 import arrowUp from './img/arrow-up.svg'
 import arrowDown from './img/arrow-down.svg';
 const Tip = ({name, text}) => {
