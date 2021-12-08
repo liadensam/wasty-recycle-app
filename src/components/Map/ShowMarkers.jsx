@@ -16,11 +16,24 @@ return data.map((bin,index)=>(
             setViewport({
                 latitude: bin.geometry[1],
                 longitude: bin.geometry[0],
-                zoom: 12,
+                zoom: 12.5,
+              });
+            onClick(bin)}}
+            onNativeClick ={()=> {console.log(bin)
+                setViewport({
+                    latitude: bin.geometry[1],
+                    longitude: bin.geometry[0],
+                    zoom: 12.5,
+                  });
+                onClick(bin)}}
+            onDoubleClick= {()=>{setViewport({
+                latitude: bin.geometry[1],
+                longitude: bin.geometry[0],
+                zoom: 15.5,
               });
             onClick(bin)}}
          >
-             <MdLocationPin color="green" size={40}/>
+             <MdLocationPin color="green" size={30}/>
              </Marker>
     ))}
     else if(data.geometry){

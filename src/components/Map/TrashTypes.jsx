@@ -3,7 +3,7 @@ import FilterBTN from './FilterBTN'
 
 
 
-const TrashTypes = ({handleFilters}) => {
+const TrashTypes = ({handleFilters,filterArray}) => {
 
 let types = [{material:"plastic", active:true},
 {material:"bottles", active:true},
@@ -18,6 +18,7 @@ let types = [{material:"plastic", active:true},
     return (
         <div className="map--buttons" >
             {types.map((item,index)=>(<FilterBTN 
+            filterArray={filterArray}
             index={index} 
             item={item.material}
             active={item.active}

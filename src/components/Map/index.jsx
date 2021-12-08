@@ -99,6 +99,7 @@ const Map = () => {
   const handleFilters = (event) => {
     const { name } = event.target
 
+    console.log(event)
 
     setFilterArray((previousFilters) => {
       return (previousFilters.indexOf(name) > -1 ? previousFilters.filter(filter => filter !== name) : [...previousFilters, name])
@@ -163,7 +164,7 @@ const Map = () => {
 
 
 
-          <div className="navigation">
+          <div className="navigation" style={{zIndex:"4"}}>
             <NavigationControl />
             <GeolocateControl />
           </div>
@@ -183,8 +184,9 @@ const Map = () => {
 
           {popupInfo && (
             <Popup
-              tipSize={5}
-              anchor="top"
+              tipSize={8}
+              anchor="bottom"
+              offsetTop={-20}
               longitude={popupInfo.geometry[0]}
               latitude={popupInfo.geometry[1]}
               closeOnClick={true}
@@ -208,16 +210,16 @@ const Map = () => {
 
 
         <div className="map--buttons">
-          <button
+          {/* <button
             onClick={() => {
               setOpen(!open);
             }}
           >
             {open ? 'show' : 'hide'} bins
-          </button>
+          </button> */}
 
 
-          <TrashTypes handleFilters={handleFilters} />
+          <TrashTypes handleFilters={handleFilters} filterArray={filterArray} />
           <button onClick={handleFilters}></button>
 
         </div>

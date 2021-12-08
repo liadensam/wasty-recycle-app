@@ -28,13 +28,13 @@ const BinInfo = (data) => {
 
 
     return (
-        <div>
-            {types.map((type)=>{
+        <div className="bin--popup--box">
+            <div>{types.map((type)=>{
                 
    return info[type.material]>1 && blob(type.color)}
                 
-            )}
-            <br/>
+            )}</div>
+            
             {display}
         </div>
 
