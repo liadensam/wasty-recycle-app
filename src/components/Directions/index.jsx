@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
 
-import './style.css';
+import './style.scss';
 import Menu from '../../components/Menu';
 
 
