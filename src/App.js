@@ -13,9 +13,9 @@ import Contact from './components/Contact';
 import Intro from './components/Intro';
 import Tips from './components/Tips';
 import Directions from './components/Directions';
-import IntroSlides from './components/IntroSlides'
+import IntroSlides from './components/IntroSlides';
 
-
+import './_variables.scss';
 import './style.scss';
 import { tipsArray } from './components/Tips/tipsArray';
 
