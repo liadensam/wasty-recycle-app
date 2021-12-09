@@ -5,6 +5,9 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
+  /* scroll-snap-type: x proximity;
+  /* Reserve space for header plus some extra space for sneak peeking. */
+  /* scroll-padding-top: 15vh; */
 }
 
 .slide-active {
@@ -21,7 +24,7 @@
   width: 100vw;
   position: relative;
   /* transition: opacity ease-in 0.6s; */
-  transform: anim;
+  /* scroll-snap-align: start; */
 }
 
 /* @keyframes anim {

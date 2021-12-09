@@ -17,12 +17,17 @@ const Home = () => {
   }
 
 
+
+
 	return (
+
+    
     <>
     <Menu />
 		<main>
 			<h2>Home</h2>
       <img className="avatar" src={avatar} alt="avatar" />
+
       <div className="recycle--buttons">
 			<button onClick={redirectToMap}>go to Map</button>
       <button></button>
@@ -35,6 +40,7 @@ const Home = () => {
       <button></button>
       </div>
 		</main>
+   
     </>
 	);
 }

@@ -19,7 +19,7 @@ const handleClick = () => {
       <div className="intro">
     </div>
     <footer><button className="button--start" onClick={handleClick}>Get started</button></footer>
- 
+
     </>
   );
 }
