@@ -4,6 +4,7 @@ import Dots from "./Dots";
 import "./style.scss";
 import { NavLink } from "react-router-dom";
 import {imgData} from './utils/data'
+import { useSwipeable } from 'react-swipeable';
 
 
 // const len = imgData.length - 1;
@@ -23,11 +24,20 @@ const IntroSlides = (props) => {
   //     setActiveIndex(activeIndex === len ? null : activeIndex + 1)
   // }
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setActiveIndex(activeIndex === len ? activeIndex : activeIndex + 1),
+    onSwipedRight: () => setActiveIndex(activeIndex < 1 ? len : activeIndex - 1),
+    // onSwipeStart
+    preventDefaultTouchmoveEvent: true,
+    // trackMouse: true,
+    trackTouch: true
+  })
+
   const redirectClass = ({isActive}) => isActive ? 'button--redirect' : 'button--redirect';
 
   return (
     <>
-    <main>
+    <main {...handlers}>
       <SliderContent activeIndex={activeIndex} imgData={imgData} />
       {/* <Arrows
         prevSlide={() =>
