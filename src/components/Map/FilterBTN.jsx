@@ -1,5 +1,12 @@
 import React from 'react'
-import {ReactComponent as Trash} from "./icons/trash.svg" 
+import {ReactComponent as Bottles} from "./icons/bottles.svg" 
+import {ReactComponent as Glass} from "./icons/glass.svg" 
+import {ReactComponent as Paper} from "./icons/paper.svg" 
+import {ReactComponent as Metal} from "./icons/metal.svg" 
+import {ReactComponent as Clothes} from "./icons/clothes.svg" 
+import {ReactComponent as Plastic} from "./icons/plastic.svg" 
+import {ReactComponent as Battery} from "./icons/battery.svg" 
+import {ReactComponent as Organic} from "./icons/organic.svg" 
 import {ReactComponent as Medicine} from "./icons/medicine.svg" 
 
 const FilterBTN = ({item,index,handleFilters,active,filterArray}) => {
@@ -13,7 +20,7 @@ const FilterBTN = ({item,index,handleFilters,active,filterArray}) => {
 
     return (
         <div key ={index} className="filter--btn--box">
-            <style jsx>
+            {/* <style jsx>
     {`
 
             
@@ -48,8 +55,7 @@ const FilterBTN = ({item,index,handleFilters,active,filterArray}) => {
     }
       .filter--icon--active {
           padding-top:10px;
-          fill:#F7F7F5;
-          stroke:#F7F7F5;
+          stroke:#F7F7F5 !important;
           transform: scale(2);
         }
 
@@ -87,9 +93,9 @@ const FilterBTN = ({item,index,handleFilters,active,filterArray}) => {
             background:#327DA3}
 
     `}
-  </style>
+  </style> */}
 
-<button className={`${filterArray.indexOf(item)==-1?"filter--btns filter--btn":`filter--btns filter--${item} filter--btn--active`}`}
+<button className={`${filterArray.indexOf(item)===-1?"filter--btns filter--btn":`filter--btns filter--${item} filter--btn--active`}`}
 name={item}
 disabled={active?false:true}
 onClick = {(e)=>{
@@ -97,8 +103,17 @@ onClick = {(e)=>{
     handleFilters(e)}}
 >
 
-<Medicine className={`${filterArray.indexOf(item)==-1?"filter--icon":"filter--icon filter--icon--active"}`} />
-<span className={`${filterArray.indexOf(item)==-1?"filter--span":"filter--span filter--span--active"}`}>{item}</span>
+{item==="metal"&&<Metal className={`${filterArray.indexOf(item)===-1?"filter--icon":"filter--icon filter--icon--active"}`} />}
+{item==="plastic"&&<Plastic className={`${filterArray.indexOf(item)===-1?"filter--icon":"filter--icon filter--icon--active"}`} />}
+{item==="paper"&&<Paper className={`${filterArray.indexOf(item)===-1?"filter--icon":"filter--icon filter--icon--active"}`} />}
+{item==="glass"&&<Glass className={`${filterArray.indexOf(item)===-1?"filter--icon":"filter--icon filter--icon--active"}`} />}
+{item==="bottles"&&<Bottles className={`${filterArray.indexOf(item)===-1?"filter--icon":"filter--icon filter--icon--active"}`} />}
+{item==="clothes"&&<Clothes className={`${filterArray.indexOf(item)===-1?"filter--icon":"filter--icon filter--icon--active"}`} />}
+{item==="battery"&&<Battery className={`${filterArray.indexOf(item)===-1?"filter--icon":"filter--icon filter--icon--active"}`} />}
+{item==="organic"&&<Organic className={`${filterArray.indexOf(item)===-1?"filter--icon":"filter--icon filter--icon--active"}`} />}
+{item==="medicine"&&<Medicine className={`${filterArray.indexOf(item)===-1?"filter--icon":"filter--icon filter--icon--active"}`} />}
+
+<span className={`${filterArray.indexOf(item)===-1?"filter--span":"filter--span filter--span--active"}`}>{item}</span>
 </button>
 
   {/* <input

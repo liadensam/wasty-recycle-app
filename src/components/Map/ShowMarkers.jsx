@@ -1,6 +1,6 @@
 import React from 'react'
 import { Marker } from 'react-map-gl'
-import {MdLocationPin} from 'react-icons/md'
+import {ReactComponent as Pin} from "./icons/marker.svg"
 
 const ShowMarkers = ({data, onClick,setViewport}) => {
 
@@ -32,8 +32,8 @@ return data.map((bin,index)=>(
                 zoom: 15.5,
               });
             onClick(bin)}}
-         >
-             <MdLocationPin color="green" size={30}/>
+         ><Pin height={"40px"} fill="green" stroke="white"/>
+             {/* <MdLocationPin color="green" size={30}/> */}
              </Marker>
     ))}
     else if(data.geometry){
@@ -45,7 +45,8 @@ return data.map((bin,index)=>(
          offsetTop={-15}
          onClick= {()=> onClick(data)}
          >
-             <MdLocationPin color="green" size={40}/>
+           <Pin/>
+             {/* <MdLocationPin color="green" size={40}/> */}
              </Marker>
     } else {return <div/>}
 }
