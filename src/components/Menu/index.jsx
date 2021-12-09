@@ -26,7 +26,7 @@ const Menu = () => {
 
       <header>
         <div className={menuOpened === true? "menu" : "menu menu--closed"} >
-          <div className="menu--buttons" >
+          <div className="menu__buttons" >
           {/* <button className="menu__btn--home" onClick={redirectToHome}></button> */}
 
           <Hamburger className="menu__icon" direction="left" size={30} duration={0.4} distance="md" color="#000" rounded label="Show menu" 

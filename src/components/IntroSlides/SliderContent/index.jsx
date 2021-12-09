@@ -9,7 +9,7 @@ function SliderContent({ activeIndex, imgData}) {
       {imgData.map((slide, index) => (
         <div
           key={index}
-          className={index === activeIndex ? "slides slide-active" : "slide-inactive"}
+          className={index === activeIndex ? "slides slide--active" : "slide--inactive"}
         >
           <img className="slide-image" src={slide.url} alt="" />
           <h2 className="slide-title">{slide.title}</h2>

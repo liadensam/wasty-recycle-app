@@ -10,12 +10,12 @@
   /* scroll-padding-top: 15vh; */
 }
 
-.slide-active {
+.slide--active {
   display: inline-block;
   opacity: 1;
 }
 
-.slide-inactive {
+.slide--inactive {
   opacity: 0;
 }
 
@@ -86,7 +86,7 @@
   border-radius: 5px 0px 0px 5px;
 } */
 
-.all-dots {
+.dot-container {
   /* width: 100%; */
   /* height: 100%; */
   /* position: absolute; */
@@ -116,7 +116,7 @@
   color: #000;
 }
 
-.footer--intro-slides {
+.footer-content {
   height: 15vh;
   display: flex;
   justify-content: space-between;

@@ -2,7 +2,7 @@ import React from "react";
 
 function Dots({ activeIndex, onclick, imgData }) {
   return (
-    <div className="all-dots">
+    <div className="dot-container">
       {imgData.map((slide, index) => (
         <span
           key={index}
