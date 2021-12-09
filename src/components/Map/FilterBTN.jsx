@@ -1,5 +1,6 @@
 import React from 'react'
 import {ReactComponent as Trash} from "./icons/trash.svg" 
+import {ReactComponent as Medicine} from "./icons/medicine.svg" 
 
 const FilterBTN = ({item,index,handleFilters,active,filterArray}) => {
 
@@ -47,6 +48,7 @@ const FilterBTN = ({item,index,handleFilters,active,filterArray}) => {
     }
       .filter--icon--active {
           padding-top:10px;
+          fill:#F7F7F5;
           stroke:#F7F7F5;
           transform: scale(2);
         }
@@ -95,7 +97,7 @@ onClick = {(e)=>{
     handleFilters(e)}}
 >
 
-<Trash className={`${filterArray.indexOf(item)==-1?"filter--icon":"filter--icon filter--icon--active"}`} />
+<Medicine className={`${filterArray.indexOf(item)==-1?"filter--icon":"filter--icon filter--icon--active"}`} />
 <span className={`${filterArray.indexOf(item)==-1?"filter--span":"filter--span filter--span--active"}`}>{item}</span>
 </button>
 
