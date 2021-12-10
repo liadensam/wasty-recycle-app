@@ -1,5 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react';
-import './style.scss'
+import './_about.scss'
+import '../../_variables.scss'
 import Menu from '../../components/Menu';
 import logo from './img/Logo.gif'
 
@@ -14,13 +15,6 @@ const About = () => {
     const handleSubmit = (event) => {
         //prevents the page from reloading
         event.preventDefault()
-        //object with properties that contain the reference to the current value of the targeted element
-        // const data = {
-        //     subject: subjectRef.current.value,
-        //     email: emailRef.current.value,
-        //     text: textRef.current.value
-        // }
-        // alert("Thank you!: \n" + JSON.stringify(data) + "Your data")
     }
 
     //to change the button text when clicked, through State
@@ -40,14 +34,15 @@ const About = () => {
       <img className="logo" src={logo} alt=""/>
        <div className="container">
            <div className="about-container">
-           <h1>About</h1>
-           <p>Dilka app is here to make the recycling process easier for people. It contains all the information you need about recycling and locations of the recycling stations in Reykjavik.</p>
+           <h1 className="about-container--title">About</h1>
+           <p className="about-container--text">Dilka app is here to make the recycling process easier for people. It contains all the information you need about recycling and locations of the recycling stations in Reykjavik.</p>
            </div>
-           <div className="contactform-container">
+           <div className="contactform--container">
                 <h1 className="contactform--title">Contact us</h1>
-                <form onSubmit={handleSubmit} className="form">
+                <form 
+                onSubmit={handleSubmit} 
+                className="form">
                         <div className="subject">
-                            {/* <label for="email">Email</label> */}
                             <input
                                 type="email"
                                 placeholder="Email"
@@ -57,8 +52,6 @@ const About = () => {
                                 ref={emailRef} 
                                 tabIndex="3"
                             />
-
-                            {/* <label for="subject">Subject</label> */}
                             <input
                                 type="text"
                                 placeholder="Subject"
@@ -67,15 +60,17 @@ const About = () => {
                                 ref={subjectRef} 
                                 tabIndex="1"
                             />
-                        
-                            {/* <label for="text">Text</label> */}
+                      
                             <textarea
                                 placeholder="Text"
                                 className="text"
                                 ref={textRef} 
                                 name="text"
                             />
-                            <button type="submit" className="send" onClick={() => setButtonText("♥")}>{buttonText}</button>
+                            <button 
+                            type="submit" 
+                            className="send" 
+                            onClick={() => setButtonText("♥")}>{buttonText}</button>
 
                         </div>
                 </form>

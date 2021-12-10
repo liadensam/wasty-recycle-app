@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-import './style.scss'
+import './_intro.scss'
 
 const Intro = () => {
 
@@ -8,7 +8,6 @@ const Intro = () => {
 const navigate = useNavigate();
 
 const handleClick = () => {
-
   navigate('/introslides')
 }
 
@@ -17,8 +16,14 @@ const handleClick = () => {
   return (
     <>
       <div className="intro">
-    </div>
-    <footer><button className="button__start" onClick={handleClick}>Get started</button></footer>
+        </div>
+      <footer>
+          <button 
+          className="button__start" 
+          onClick={handleClick}>
+            Get started
+          </button>
+      </footer>
 
     </>
   );

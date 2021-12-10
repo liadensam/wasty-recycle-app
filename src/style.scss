@@ -1,24 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+// //font
+// $main-font: "Nunito", sans-serif;
 
-html {
-  font-family: "Open Sans", sans-serif;
-}
+// //base
+// * {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
 
-#root {
-  display: flex;
-  flex-direction: column;
-}
+// html {
+//   font-family: $main-font;
+// }
 
-.main-content {
-  height: 85vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  touch-action: none;
-}
+// //colors
+// $mainGreen-color: #628e60;
+// $black-text-color: #1c1b1b;
+// $darkGreen-text-color: #2a412f;
+// $lightGreen-color: #7cac79;
+// $green-color: #008658;
+// $white-color: #ffffff;
+// $lightGray-color: #f7f7f5;
+// $gray-color: #dadada;
+// $purple-color: #7871aa;
+// $blue-color: #327da3;
+// $lightBlue-color: #63cfcb;
+// $orange-color: #ed8428;
+// $sandy-color: #e7b562;
+// $red-color: #ff0000;
+// $darkPink-color: #bd5f60;
+// $lightPink-color: #f4b09b;

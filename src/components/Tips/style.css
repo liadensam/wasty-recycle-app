@@ -1,0 +1,84 @@
+.img-tips {
+  width: 40vh;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.tips-container {
+  height: 85vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sign {
+  font-size: 25px;
+}
+
+.accordian {
+  width: 85vw;
+  margin-bottom: 1.5rem;
+  /* border: 1px solid rgb(133, 133, 133); */
+}
+
+.accordian--header {
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 15px;
+  border: 0.5px solid #858585;
+  background-color: #fff;
+  padding: 5px 0px 50x 0;
+  height: 48px;
+  color: #008658;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.accordian--body {
+  padding: 1rem;
+}
+
+.accordian--body--text {
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+}
+
+.accordian--icon {
+  -webkit-transition: -webkit-transform 0.8 ease;
+  transition: -webkit-transform 0.8 ease;
+  transition: transform 0.8 ease;
+  transition: transform 0.8 ease, -webkit-transform 0.8 ease;
+}
+
+.show {
+  font-size: 15px;
+  color: #000;
+  background-color: #e0e9de;
+  line-height: 1.3;
+}
+
+/* style to rotate icon when state is active */
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=style.css.map */

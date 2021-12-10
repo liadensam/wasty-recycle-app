@@ -1,13 +1,10 @@
+//animation/illustration
 .logo {
   width: 60vw;
   margin: 0 auto;
 }
 
-.subject {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+//main section
 .container {
   width: 100vw;
   display: flex;
@@ -16,29 +13,34 @@
   gap: 3rem;
 }
 
-.about-container h1 {
-  margin-bottom: 10px;
-}
-.about-container {
-  width: 75vw;
-  align-self: center;
-}
-
-.contactform-container {
+//about us text
+.subject {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.contactform--title {
-  margin-bottom: 1rem;
+.about-container {
+  width: 75vw;
+  align-self: center;
+
+  &--title {
+    margin-bottom: 10px;
+  }
 }
-// .contactform-container h1 {
-//   width: 340px;
-//   margin: auto;
-//   margin-top: 2rem;
-// }
+
+//contact us section, form
+.contactform-- {
+  &container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &--title {
+    margin-bottom: 1rem;
+  }
+}
 
 /* send button */
 .send {
@@ -52,7 +54,6 @@
   cursor: pointer;
   width: 20vw;
   text-align: center;
-  // position: relative;
   align-self: center;
 }
 
@@ -65,8 +66,6 @@
 .subject input {
   all: unset;
   border: 0.5px solid rgb(133, 133, 133);
-  // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  // background-color: white;
   color: #000;
   font-size: 20px;
   padding: 10px 10px;
@@ -79,8 +78,6 @@
 .subject textarea {
   all: unset;
   border: 0.5px solid rgb(133, 133, 133);
-  // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  // background-color: white;
   width: 65vw;
   height: 180px;
   color: #000;

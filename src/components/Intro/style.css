@@ -1,0 +1,11 @@
+.intro {
+  background-image: url(./img/Intro.gif);
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+.button__start {
+  width: 100vw;
+  height: 10vh;
+}
+/*# sourceMappingURL=style.css.map */

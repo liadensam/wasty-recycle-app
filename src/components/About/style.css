@@ -1,0 +1,119 @@
+.logo {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.subject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+}
+
+.about-container h1 {
+  margin-bottom: 10px;
+}
+
+.about-container {
+  width: 75vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.contactform-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactform--title {
+  margin-bottom: 1rem;
+}
+
+/* send button */
+.send {
+  all: unset;
+  background-color: #628e60;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 10px;
+  margin-bottom: 95px;
+  cursor: pointer;
+  width: 20vw;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.subject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.subject input {
+  all: unset;
+  border: 0.5px solid #858585;
+  color: #000;
+  font-size: 20px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  cursor: pointer;
+  width: 65vw;
+}
+
+.subject textarea {
+  all: unset;
+  border: 0.5px solid #858585;
+  width: 65vw;
+  height: 180px;
+  color: #000;
+  font-size: 20px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  cursor: pointer;
+  max-width: 300px;
+}
+/*# sourceMappingURL=style.css.map */

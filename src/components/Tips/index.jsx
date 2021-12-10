@@ -9,16 +9,21 @@ const Tips = ({tipsArray}) => {
 	return (
     <>
     <Menu/>
-    <img className="img-tips" src={imgIdea} alt=""/>
-		<main className="tips-container">
-      {tipsArray.map((item, index) => 
-        <Tip
-        key = {index}
-        name = {item.name}
-        text = {item.text}
-      />)}
+      <img 
+      className="img-tips" 
+      src={imgIdea} 
+      alt="animation a girl with a lightbulb above her head"
+      />
+        <main className="tips-container">
+          {tipsArray.map
+          ((item, index) => 
+            <Tip
+            key = {index}
+            name = {item.name}
+            text = {item.text}
+          />)}
 
-		</main>
+        </main>
    
 
     </>

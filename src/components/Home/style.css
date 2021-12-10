@@ -1,6 +1,8 @@
 .recycle--buttons {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
   height: 40vh;
   width: 85vw;
@@ -13,9 +15,16 @@
 
 .home-container {
   height: 85vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .home-content {
@@ -38,23 +47,37 @@
   width: 60vw;
   margin: 0 auto;
   height: auto;
-  // margin-top: calc(100vh - 85vh - 20px);
   margin-top: 44vh;
   background: #fff;
   border-radius: 15px;
   padding: 20px;
   border: 1px solid #999;
   overflow: auto;
-  animation: popup 1s ease-in-out;
-  transform-origin: top right;
+  -webkit-animation: popup 1s ease-in-out;
+          animation: popup 1s ease-in-out;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+@-webkit-keyframes popup {
+  0% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
 }
 
 @keyframes popup {
   0% {
-    transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
   }
   100% {
-    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
 }
 
@@ -64,14 +87,12 @@
   position: fixed;
   right: 22vw;
   top: 45vh;
-  background: #bbbbbb;
   color: #fff;
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
   line-height: 20px;
   text-align: center;
-  // border: 0.5px solid #2a412f;
   font-size: 1rem;
 }
 
@@ -85,3 +106,4 @@
   color: #2a412f;
   font-size: 0.8rem;
 }
+/*# sourceMappingURL=style.css.map */

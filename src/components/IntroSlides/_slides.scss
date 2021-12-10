@@ -1,0 +1,104 @@
+//wrapper around the all slides
+.intro-container {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//wrapper around each slide
+.slider-container {
+  height: 85vh;
+  width: 85vw;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+//slide activity
+.slide-active {
+  display: inline-block;
+  opacity: 1;
+}
+
+.slide-inactive {
+  opacity: 0;
+}
+
+//general setting of a slide
+.slides {
+  height: 85vh;
+  width: 100vw;
+  position: relative;
+}
+
+.slide {
+  &-image {
+    position: absolute;
+    width: 80vw;
+    margin-top: 1rem;
+  }
+  &-title,
+  &-text {
+    color: #000;
+    font-size: 1.5rem;
+    position: absolute;
+    text-align: left;
+    top: 60%;
+    z-index: 10;
+  }
+  &-text {
+    top: 70%;
+    font-size: 1rem;
+  }
+}
+
+//dots on the bottom signaling movement
+.all-dots {
+  display: flex;
+  justify-content: center;
+  margin-left: 7vw;
+}
+
+.dot {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0px 3px;
+  background-color: #fff;
+  background-color: #000;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active-dot,
+.dot:hover {
+  background-color: #f7f7f5;
+}
+
+//skipping button
+.button-skip {
+  margin-right: 10vw;
+  padding: 0.4rem 1.2rem;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #2a412f;
+}
+
+//footer container allignment
+.footer-intro {
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.intro-slides--main {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
