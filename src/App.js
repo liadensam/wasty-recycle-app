@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -14,20 +14,22 @@ import Intro from './components/Intro';
 import Tips from './components/Tips';
 import Directions from './components/Directions';
 import IntroSlides from './components/IntroSlides'
-
-
+import Menu from './components/Menu';
 import './style.scss';
 import { tipsArray } from './components/Tips/tipsArray';
 
 const App = () => {
 
+const [hideMenu,setHideMenu]= useState(true)
+
   return (
 
       <BrowserRouter>
+      <Menu hideMenu={hideMenu}/>
           <Routes>
             <Route path="/" element={<Intro />} />
             <Route path="/introslides" element={<IntroSlides />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/home" element={<Home setHideMenu={setHideMenu}/>} />
             <Route path="/map" element={<Map/>} />
             <Route path="/about" element={<About />} />
             {/* faq - the json file needs to be mapped */}

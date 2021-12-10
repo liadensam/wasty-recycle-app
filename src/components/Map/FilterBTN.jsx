@@ -113,7 +113,7 @@ onClick = {(e)=>{
 {item==="organic"&&<Organic className={`${filterArray.indexOf(item)===-1?"filter--icon":"filter--icon filter--icon--active"}`} />}
 {item==="medicine"&&<Medicine className={`${filterArray.indexOf(item)===-1?"filter--icon":"filter--icon filter--icon--active"}`} />}
 
-<span className={`${filterArray.indexOf(item)===-1?"filter--span":"filter--span filter--span--active"}`}>{item}</span>
+<span className={`${filterArray.indexOf(item)===-1?"filter--span":"filter--span filter--span--active"}`}>{item==="medicine"||item==="organic"||item==="battery"?<span className="filter--span--disabled">{item}</span>:`${item}`}</span>
 </button>
 
   {/* <input

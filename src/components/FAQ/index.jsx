@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import './style.scss'
 
 import { AiOutlineArrowDown } from 'react-icons/ai'
-import Menu from '../../components/Menu';
+
 
 const Faq = (props) => {
   const [setActive, setActiveState] = useState("");
@@ -35,7 +35,7 @@ const Faq = (props) => {
 
     return (
       <>
-        <Menu />
+     
         <div className="accordion__section">
             <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
                 <AiOutlineArrowDown className={`${setRotate}`} />

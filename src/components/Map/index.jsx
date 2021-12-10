@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router';
 import ReactMapGL, { FlyToInterpolator, Popup, NavigationControl, GeolocateControl } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import ShowMarkers from './ShowMarkers';
 import TrashTypes from './TrashTypes';
 import BinInfo from './BinInfo';
-import Menu from '../../components/Menu';
+
+import BinInfoSlider from './BinInfoSlider';
 import './style.scss'
 // import { accessToken } from 'mapbox-gl';
 
@@ -19,11 +19,7 @@ token = process.env.REACT_APP_MAP_TOKEN
 const Map = () => {
 
 
-  const navigate = useNavigate();
-  const redirectToDirections = () => {
-    navigate('/directions')
-  }
-
+  const [sliderOn,setSliderOn] = useState(false)
   const [popupInfo, setPopupInfo] = useState(null)
   const [bins, setBins] = useState([]);
   const [filteredBins, setFilteredBins] = useState([])
@@ -120,7 +116,7 @@ const Map = () => {
 
   return (
     <>
-     <Menu />
+     
       <main>
 
         {/* If token is achievable render styled tiles, if not, use the basic ones */}
@@ -156,13 +152,19 @@ const Map = () => {
           {filteredBins ? <ShowMarkers
             data={filteredBins}
             onClick={setPopupInfo}
-            setViewport={setViewport} /> :
+            setViewport={setViewport}
+            setSliderOn={setSliderOn} /> :
             <div className="map-alert">
               {`We are sorry! 
               There are no locations found`}
             </div>}
 
-          {popupInfo && (
+
+              {popupInfo && (
+                <BinInfoSlider info={popupInfo} sliderOn={sliderOn} setSliderOn={setSliderOn}/>
+              )}
+
+          {/* {popupInfo && (
             <Popup
               tipSize={8}
               anchor="bottom"
@@ -173,8 +175,9 @@ const Map = () => {
               onClose={setPopupInfo}
             >
               <BinInfo info={popupInfo} />
-            </Popup>
+            </Popup> 
           )}
+            */}
         </ReactMapGL> :  <ReactMapGL
           transitionDuration={1300} transitionInterpolator={new FlyToInterpolator()}
           {...viewport}
@@ -294,7 +297,6 @@ const Map = () => {
 
         </div>
       </main>
-      <button className="button--find" onClick={redirectToDirections}>Find</button>
 
     </>
 

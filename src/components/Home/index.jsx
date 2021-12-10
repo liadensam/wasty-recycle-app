@@ -4,26 +4,26 @@ import './style.scss'
 
 import avatar from './img/avatar.svg'
 
-import Menu from '../../components/Menu';
 
 
-const Home = () => {
+
+const Home = ({setHideMenu}) => {
 
   const navigate = useNavigate();
 
   const redirectToMap = () => {
-
+    setHideMenu(false)
     navigate('/map')
   }
 
-
+  
 
 
 	return (
 
     
     <>
-    <Menu />
+ 
 		<main>
 			<h2>Home</h2>
       <img className="avatar" src={avatar} alt="avatar" />

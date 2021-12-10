@@ -2,7 +2,7 @@ import React from 'react'
 import { Marker } from 'react-map-gl'
 import {ReactComponent as Pin} from "./icons/marker.svg"
 
-const ShowMarkers = ({data, onClick,setViewport}) => {
+const ShowMarkers = ({data, onClick,setViewport,setSliderOn}) => {
 
     if(data.length){
 return data.map((bin,index)=>(
@@ -12,7 +12,7 @@ return data.map((bin,index)=>(
          latitude={bin.geometry[1]}
          offsetLeft={-15}
          offsetTop={-15}
-         onClick= {()=> {console.log(bin)
+         onClick= {()=> {setSliderOn(true)
             setViewport({
                 latitude: bin.geometry[1],
                 longitude: bin.geometry[0],
