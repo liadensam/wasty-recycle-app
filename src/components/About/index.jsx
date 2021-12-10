@@ -36,7 +36,7 @@ const About = () => {
 
     return(
       <>
-      <Menu />
+    
       <img className="logo" src={logo} alt=""/>
        <div className="container">
            <div className="about-container">

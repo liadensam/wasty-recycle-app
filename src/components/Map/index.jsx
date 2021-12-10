@@ -16,7 +16,7 @@ let token
 const geoJsonUrl = 'https://lukrgatt.reykjavik.is/server/rest/services/OpinGognThjonusta/Endurvinnslugamar/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson';
 token = process.env.REACT_APP_MAP_TOKEN
 
-const Map = () => {
+const Map = ({setHideMenu}) => {
 
 
   const [sliderOn,setSliderOn] = useState(false)
@@ -87,7 +87,7 @@ const Map = () => {
 
   useEffect(() => {
     fetchBins();
-
+    setHideMenu(false)
   }, []);
 
   const handleFilters = (event) => {

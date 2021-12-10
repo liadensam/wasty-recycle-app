@@ -119,13 +119,26 @@
   background-color: #f7f7f5;
 }
 
-.button-skip {
-  margin-right: 10vw;
-  padding: 0.4rem 1.2rem;
+.button--redirect {
+  text-decoration: none;
+  padding: 0.6rem 1.6rem;
   border-radius: 15px;
-  border: 1px solid #000;
   background-color: #fff;
   color: #2a412f;
+
+  position:absolute;
+  left:72vw;
+  bottom:12vh;
+  overflow:hidden;
+    border-radius:8px;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+  
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+
 }
 
 // .button__clicked {

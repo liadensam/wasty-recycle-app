@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 // import { useNavigate } from 'react-router';
 import { Turn as Hamburger } from 'hamburger-react'
 import{ReactComponent as WaveBottom} from './img/waveBottom.svg'
-import{ReactComponent as WaveTop} from './img/waveTop3.svg'
+import{ReactComponent as WaveTop} from './img/waveSky.svg'
 import{ReactComponent as WaveMid} from './img/waveTop2.svg'
 import{ReactComponent as Logo} from './img/logoMenu.svg'
 
@@ -28,9 +28,9 @@ const Menu = ({hideMenu}) => {
   
   return (
 
-      <header className={hideMenu&&"hidden"}>
-          <Hamburger className="menu--icon" direction="left" size={30} duration={0.4} distance="md" color="#000" rounded label="Show menu" 
-                toggled={menuOpened} toggle={setMenuOpened} />
+    <header className={hideMenu&&"hidden"}>
+        <Hamburger className="menu--icon" direction="left" size={30} duration={0.4} distance="md" color="#000" rounded label="Show menu" 
+              toggled={menuOpened} toggle={setMenuOpened} />
         <div className={menuOpened === true? "menu" : "menu menu--closed"} >
           <WaveTop className="wave--menu--top" width="100vw" />
           <WaveMid className="wave--menu--mid" width="100vw" />
@@ -56,7 +56,7 @@ const Menu = ({hideMenu}) => {
               <NavLink className={classLink} to="/map" onClick={handleClick}>Map</NavLink>
               <NavLink className={classLink} to="/about" onClick={handleClick}>About</NavLink>
               <NavLink className={classLink} to="/tips" onClick={handleClick}>Tips</NavLink>
-              <NavLink className={classLink} to="/contact" onClick={handleClick}>Contact</NavLink>
+              {/* <NavLink className={classLink} to="/contact" onClick={handleClick}>Contact</NavLink> */}
               {/* <NavLink className={classLink} to="/faq">FAQ</NavLink> */}
               
             </nav>

@@ -8,6 +8,8 @@ import {imgData} from './utils/data'
 import { useSwipeable } from 'react-swipeable';
 // import { useDrag } from '@use-gesture/react'
 // import { animated, useSpring } from '@react-spring/web'
+import {ReactComponent as Wave} from './assets/wave.svg'
+
 
 
 const len = imgData.length - 1;
@@ -71,14 +73,14 @@ const IntroSlides = () => {
 
 
       <footer className="footer-content">
-      <button><NavLink className={redirectClass} to="/home">Skip</NavLink></button>
+      <NavLink className={redirectClass} to="/home">Skip</NavLink>
       <Dots
           activeIndex={activeIndex}
           imgData={imgData}
           onclick={(activeIndex) => setActiveIndex(activeIndex)}
         /></footer>
 
-
+<Wave className="home--wave" />
         
     </>
   );

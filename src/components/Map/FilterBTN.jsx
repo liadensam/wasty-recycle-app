@@ -9,7 +9,7 @@ import {ReactComponent as Battery} from "./icons/battery.svg"
 import {ReactComponent as Organic} from "./icons/organic.svg" 
 import {ReactComponent as Medicine} from "./icons/medicine.svg" 
 
-// const FilterBTN = ({item,index,handleFilters,active,filterArray}) => {
+ const FilterBTN = ({item,index,handleFilters,active,filterArray}) => {
 
 
     
@@ -134,8 +134,8 @@ onClick = {(e)=>{
 //             >
 //                 {item}</label> */}
 
-//         </div>
-//     )
-// }
+        </div>
+    )
+}
 
-// export default FilterBTN
+export default FilterBTN

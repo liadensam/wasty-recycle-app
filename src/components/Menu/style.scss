@@ -6,6 +6,11 @@
   
 }
 
+header {
+  position:fixed;
+  z-index: 10;
+}
+
 .menu--closed .menu__items {
   opacity: 0;
 }
@@ -17,7 +22,9 @@
 }
 
 .hamburger-react {
-  position:absolute;
+  position:fixed;
+  left:85vw;
+  top:16px;
   z-index: 20;
 
 }
@@ -40,7 +47,7 @@
 }
 
 .menu--closed {
-  margin-top: -100vh;
+  margin-top: -105vh;
  }
 
 
