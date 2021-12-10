@@ -1,6 +1,5 @@
 import React, {useRef, useEffect, useState} from 'react';
 import './style.scss'
-import Menu from '../../components/Menu';
 import logo from './img/Logo.gif'
 
 const About = () => {
