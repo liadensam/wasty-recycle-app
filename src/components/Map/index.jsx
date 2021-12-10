@@ -21,6 +21,10 @@ const Map = () => {
 
   const [sliderOn,setSliderOn] = useState(false)
   const [popupInfo, setPopupInfo] = useState(null)
+<<<<<<< HEAD
+=======
+  // const [open, setOpen] = useState(true)
+>>>>>>> abd5698df8c6bceddf9a11bb73968d40525b3d4d
   const [bins, setBins] = useState([]);
   const [filteredBins, setFilteredBins] = useState([])
   const [filterArray, setFilterArray] = useState([])

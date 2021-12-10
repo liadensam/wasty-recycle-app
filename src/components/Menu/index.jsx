@@ -55,9 +55,9 @@ const Menu = ({hideMenu}) => {
               {/* <NavLink to="/home">Home</NavLink> */}
               <NavLink className={classLink} to="/map" onClick={handleClick}>Map</NavLink>
               <NavLink className={classLink} to="/about" onClick={handleClick}>About</NavLink>
-              <NavLink className={classLink} to="/faq" onClick={handleClick}>FAQ</NavLink>
               <NavLink className={classLink} to="/tips" onClick={handleClick}>Tips</NavLink>
               <NavLink className={classLink} to="/contact" onClick={handleClick}>Contact</NavLink>
+              {/* <NavLink className={classLink} to="/faq">FAQ</NavLink> */}
               
             </nav>
          

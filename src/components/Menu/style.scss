@@ -1,4 +1,4 @@
-header {
+.menu-container {
   display: flex;
   justify-content: flex-end;
   // background-color: lightgray;
@@ -6,7 +6,11 @@ header {
   
 }
 
-.menu--buttons {
+.menu--closed .menu__items {
+  opacity: 0;
+}
+
+.menu__buttons {
   display: flex;
   justify-content: flex-end;
   position: relative;

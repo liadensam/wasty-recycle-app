@@ -3,6 +3,7 @@ import SliderContent from "./SliderContent";
 import Dots from "./Dots";
 import "./style.scss";
 import { NavLink } from "react-router-dom";
+// import { useNavigate } from 'react-router';
 import {imgData} from './utils/data'
 import { useSwipeable } from 'react-swipeable';
 // import { useDrag } from '@use-gesture/react'
@@ -43,7 +44,7 @@ const IntroSlides = () => {
   // }, [activeIndex]);
 
 
-  const redirectClass = ({isActive}) => isActive ? 'button--redirect' : 'button--redirect';
+  const redirectClass = ({isActive}) => isActive ? 'button--redirect button__active' : 'button--redirect';
 
 
   return (
@@ -51,9 +52,9 @@ const IntroSlides = () => {
 
 
   
-      <main {...handlers}>
+      <main {...handlers} className="main-content">
       {/* <main> */}
-        <SliderContent className="slide__content" activeIndex={activeIndex} imgData={imgData}/>
+        <SliderContent className="slide-content" activeIndex={activeIndex} imgData={imgData}/>
         
         {/* <Arrows
           prevSlide={() =>
@@ -69,7 +70,7 @@ const IntroSlides = () => {
 
 
 
-      <footer className="footer--intro-slides">
+      <footer className="footer-content">
       <button><NavLink className={redirectClass} to="/home">Skip</NavLink></button>
       <Dots
           activeIndex={activeIndex}

@@ -9,7 +9,7 @@ import {ReactComponent as Battery} from "./icons/battery.svg"
 import {ReactComponent as Organic} from "./icons/organic.svg" 
 import {ReactComponent as Medicine} from "./icons/medicine.svg" 
 
-const FilterBTN = ({item,index,handleFilters,active,filterArray}) => {
+// const FilterBTN = ({item,index,handleFilters,active,filterArray}) => {
 
 
     
@@ -25,23 +25,23 @@ const FilterBTN = ({item,index,handleFilters,active,filterArray}) => {
 
             
 
-        svg{transition: all 1.2s cubic-bezier(0.44, 0.6, 0.22, 1.54);
-            pointer-events:none;}
+//         svg{transition: all 1.2s cubic-bezier(0.44, 0.6, 0.22, 1.54);
+//             pointer-events:none;}
 
-        .filter--btns{
-            transition:all 1.2s cubic-bezier(0.44, 0.6, 0.22, 1.54);
-            position:relative;
-            overflow:hidden;
-            width:88px;
-            height:88px;
-            border:none;
-            border-radius:8px;
-            display:flex;
-            flex-direction:column;
-            justify-content:;
-            align-items:center;
-            padding: 8px;  
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+//         .filter--btns{
+//             transition:all 1.2s cubic-bezier(0.44, 0.6, 0.22, 1.54);
+//             position:relative;
+//             overflow:hidden;
+//             width:88px;
+//             height:88px;
+//             border:none;
+//             border-radius:8px;
+//             display:flex;
+//             flex-direction:column;
+//             justify-content:;
+//             align-items:center;
+//             padding: 8px;  
+//             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   
         }
         .filter--btn{
@@ -131,11 +131,11 @@ onClick = {(e)=>{
             className = "filter-label"
             htmlFor={item}
             
-            >
-                {item}</label> */}
+//             >
+//                 {item}</label> */}
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
-export default FilterBTN
+// export default FilterBTN

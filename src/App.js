@@ -7,9 +7,8 @@ import {
 
 import Home from './components/Home';
 import Map from './components/Map';
+import Info from './components/Info';
 import About from './components/About';
-import Faq from './components/FAQ';
-import Contact from './components/Contact';
 import Intro from './components/Intro';
 import Tips from './components/Tips';
 import Directions from './components/Directions';
