@@ -1,3 +1,18 @@
+.img-tips {
+  width: 40vh;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.tips-container {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .sign {
   font-size: 25px;
 }
@@ -7,7 +22,6 @@
   /* border: 1px solid rgb(133, 133, 133); */
 }
 
-
 .accordian--header {
   font-weight: 600;
   font-size: 18px;
@@ -16,8 +30,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px 15px;
-  border: .5px solid rgb(133, 133, 133);
-  background-color: #FFF;
+  border: 0.5px solid rgb(133, 133, 133);
+  background-color: #fff;
   // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   padding: 5px 0px 50x 0;
   height: 48px;
@@ -30,11 +44,9 @@
 }
 
 .show p {
-  padding-right: .8rem;
-  padding-left: .8rem,
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
 }
-
-
 
 .show {
   font-size: 15px;

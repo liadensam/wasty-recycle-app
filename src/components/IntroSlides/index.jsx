@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import SliderContent from "./SliderContent";
 import Dots from "./Dots";
 import "./style.scss";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+import { useNavigate } from 'react-router';
 import {imgData} from './utils/data'
 import { useSwipeable } from 'react-swipeable';
 
@@ -33,7 +34,12 @@ const IntroSlides = (props) => {
     trackTouch: true
   })
 
-  const redirectClass = ({isActive}) => isActive ? 'button--redirect' : 'button--redirect';
+  const navigate = useNavigate();
+  const redirectToHome = () => {
+    navigate('/home')
+  }
+
+  // const redirectClass = ({isActive}) => isActive ? 'button--redirect' : 'button--redirect';
 
   return (
     <>
@@ -49,7 +55,10 @@ const IntroSlides = (props) => {
       /> */}
     </main>
     <footer className="footer-intro">
-    <button className="button-skip"><NavLink className={redirectClass} to="/home">Skip</NavLink></button>
+    <button className="button-skip" onClick={redirectToHome}>
+      Skip
+      {/* <NavLink className={redirectClass} to="/home">Skip</NavLink> */}
+      </button>
      <Dots
         activeIndex={activeIndex}
         imgData={imgData}

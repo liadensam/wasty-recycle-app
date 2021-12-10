@@ -9,8 +9,8 @@ const Tips = ({tipsArray}) => {
 	return (
     <>
     <Menu/>
-    <img src={imgIdea} alt=""/>
-		<main>
+    <img className="img-tips" src={imgIdea} alt=""/>
+		<main className="tips-container">
       {tipsArray.map((item, index) => 
         <Tip
         key = {index}
@@ -19,6 +19,7 @@ const Tips = ({tipsArray}) => {
       />)}
 
 		</main>
+   
 
     </>
 	);

@@ -1,8 +1,9 @@
 .menu-container {
   display: flex;
   justify-content: flex-end;
-  background-color: lightgray;
+  background-color: #628e60;
   height: 10vh;
+  width: 100vw;
 }
 
 .menu--closed .menu__items {
@@ -15,12 +16,11 @@
   position: relative;
 }
 
-
 .menu__items {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: lightgray;
+  background-color: #628e60;
   position: relative;
   width: 100vw;
   height: 100vh;

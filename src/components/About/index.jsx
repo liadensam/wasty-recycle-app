@@ -37,17 +37,16 @@ const About = () => {
     return(
       <>
       <Menu />
-      <img src={logo} alt=""/>
+      <img className="logo" src={logo} alt=""/>
        <div className="container">
            <div className="about-container">
            <h1>About</h1>
            <p>Dilka app is here to make the recycling process easier for people. It contains all the information you need about recycling and locations of the recycling stations in Reykjavik.</p>
            </div>
            <div className="contactform-container">
-                <h1>Contact us</h1>
+                <h1 className="contactform--title">Contact us</h1>
                 <form onSubmit={handleSubmit} className="form">
                         <div className="subject">
-                        <br/>
                             {/* <label for="email">Email</label> */}
                             <input
                                 type="email"
@@ -59,7 +58,6 @@ const About = () => {
                                 tabIndex="3"
                             />
 
-                            <br/>
                             {/* <label for="subject">Subject</label> */}
                             <input
                                 type="text"
@@ -70,7 +68,6 @@ const About = () => {
                                 tabIndex="1"
                             />
                         
-                            <br/>
                             {/* <label for="text">Text</label> */}
                             <textarea
                                 placeholder="Text"
@@ -78,8 +75,7 @@ const About = () => {
                                 ref={textRef} 
                                 name="text"
                             />
-                            <br/>
-                            <button type="submit" className="send" onClick={() => setButtonText("Thank you!")}>{buttonText}</button>
+                            <button type="submit" className="send" onClick={() => setButtonText("♥")}>{buttonText}</button>
 
                         </div>
                 </form>

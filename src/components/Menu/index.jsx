@@ -28,7 +28,7 @@ const Menu = () => {
         <div className={menuOpened === true? "menu" : "menu menu--closed"} >
           <div className="menu__buttons" >
 
-          <Hamburger className="menu__icon" direction="left" size={30} duration={0.4} distance="md" color="#000" rounded label="Show menu" 
+          <Hamburger className="menu__icon" direction="left" size={30} duration={0.4} distance="md" color="#fff" rounded label="Show menu" 
                 toggled={menuOpened} toggle={setMenuOpened} />
 
           {/* <Hamburger onToggle={toggled => {

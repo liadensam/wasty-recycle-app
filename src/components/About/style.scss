@@ -1,33 +1,44 @@
-.form {
-  margin: auto;
+.logo {
+  width: 60vw;
+  margin: 0 auto;
 }
 
-.about-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 360px;
+.subject {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.about-container p {
-  width: 340px;
-  margin: auto;
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
 }
 
 .about-container h1 {
   margin-bottom: 10px;
 }
+.about-container {
+  width: 75vw;
+  align-self: center;
+}
 
 .contactform-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.contactform-container h1 {
-  width: 340px;
-  margin: auto;
-  margin-top: 2rem;
+.contactform--title {
+  margin-bottom: 1rem;
 }
+// .contactform-container h1 {
+//   width: 340px;
+//   margin: auto;
+//   margin-top: 2rem;
+// }
 
 /* send button */
 .send {
@@ -37,35 +48,46 @@
   font-size: 20px;
   padding: 10px 60px;
   border-radius: 10px;
-  margin: 10px 95px;
+  margin-bottom: 95px;
   cursor: pointer;
+  width: 20vw;
+  text-align: center;
   // position: relative;
+  align-self: center;
+}
+
+.subject {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .subject input {
   all: unset;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  border: 0.5px solid rgb(133, 133, 133);
+  // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   // background-color: white;
   color: #000;
   font-size: 20px;
   padding: 10px 10px;
   border-radius: 10px;
-  margin: 10px 40px;
+  margin-bottom: 18px;
   cursor: pointer;
-  max-width: 70%;
+  width: 65vw;
 }
 
 .subject textarea {
   all: unset;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  border: 0.5px solid rgb(133, 133, 133);
+  // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   // background-color: white;
-  width: 250px;
+  width: 65vw;
   height: 180px;
   color: #000;
   font-size: 20px;
   padding: 10px 10px;
   border-radius: 10px;
-  margin: 10px 40px;
+  margin-bottom: 18px;
   cursor: pointer;
   max-width: 300px;
 }

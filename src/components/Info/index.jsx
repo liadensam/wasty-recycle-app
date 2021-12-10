@@ -10,7 +10,7 @@ const Info = () => {
     <div>
       <Menu/>
       {/* <h1>Info</h1> */}
-      <img src={Scratching} alt=""/>
+      <img className="info-img" src={Scratching} alt=""/>
       <div className="info-accordion">
       {/* looping over the using the array map method, and passing the corresponding title and content to the Accordion component. */}
         {infoArrayData.map(({ title, content }) => (
