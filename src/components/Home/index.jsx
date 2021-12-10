@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import './style.scss'
 
-import avatar from './img/avatar.svg'
+import imgTapping from './img/Tapping.gif'
 
 import Menu from '../../components/Menu';
 
@@ -22,7 +22,7 @@ const Home = () => {
     <Menu />
 		<main>
 			<h2>Home</h2>
-      <img className="avatar" src={avatar} alt="avatar" />
+      <img className="avatar" src={imgTapping} alt="tapping girl" />
       <div className="recycle--buttons">
 			<button onClick={redirectToMap}>go to Map</button>
       <button></button>

@@ -7,7 +7,7 @@ import {imgData} from './utils/data'
 import { useSwipeable } from 'react-swipeable';
 
 
-// const len = imgData.length - 1;
+const len = imgData.length - 1;
 
 const IntroSlides = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -25,7 +25,7 @@ const IntroSlides = (props) => {
   // }
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => setActiveIndex(activeIndex === len ? activeIndex : activeIndex + 1),
+    onSwipedLeft: () => setActiveIndex(activeIndex === len ? 0 : activeIndex + 1),
     onSwipedRight: () => setActiveIndex(activeIndex < 1 ? len : activeIndex - 1),
     // onSwipeStart
     preventDefaultTouchmoveEvent: true,
@@ -37,7 +37,7 @@ const IntroSlides = (props) => {
 
   return (
     <>
-    <main {...handlers}>
+    <main className="intro-container" {...handlers} >
       <SliderContent activeIndex={activeIndex} imgData={imgData} />
       {/* <Arrows
         prevSlide={() =>
@@ -48,8 +48,8 @@ const IntroSlides = (props) => {
         }
       /> */}
     </main>
-    <footer className="footer--intro-slides">
-    <button><NavLink className={redirectClass} to="/home">Skip</NavLink></button>
+    <footer className="footer-intro">
+    <button className="button-skip"><NavLink className={redirectClass} to="/home">Skip</NavLink></button>
      <Dots
         activeIndex={activeIndex}
         imgData={imgData}

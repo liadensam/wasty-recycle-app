@@ -26,7 +26,7 @@ const Map = () => {
   }
 
   const [popupInfo, setPopupInfo] = useState(null)
-  const [open, setOpen] = useState(true)
+  // const [open, setOpen] = useState(true)
   const [bins, setBins] = useState([]);
   const [filteredBins, setFilteredBins] = useState([])
   const [filterArray, setFilterArray] = useState([])

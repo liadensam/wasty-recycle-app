@@ -2,9 +2,12 @@
   font-size: 25px;
 }
 .accordian {
-  width: 100vw;
+  width: 85vw;
+  margin-bottom: 1.5rem;
   /* border: 1px solid rgb(133, 133, 133); */
 }
+
+
 .accordian--header {
   font-weight: 600;
   font-size: 18px;
@@ -13,9 +16,39 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px 15px;
-  border-bottom: 2px solid rgb(133, 133, 133);
-  background-color: rgb(255, 255, 255);
+  border: .5px solid rgb(133, 133, 133);
+  background-color: #FFF;
+  // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 5px 0px 50x 0;
+  height: 48px;
+  color: #008658;
+  font-size: 18px;
+  border-radius: 10px;
 }
 .accordian--body {
-  padding: 15px 5px;
+  padding: 1rem;
+}
+
+.show p {
+  padding-right: .8rem;
+  padding-left: .8rem,
+}
+
+
+
+.show {
+  font-size: 15px;
+  color: #000;
+  background-color: #e0e9de;
+  line-height: 1.3;
+}
+
+/* accordion icon */
+.accordion--icon {
+  transition: transform 0.8 ease;
+}
+
+/* style to rotate icon when state is active */
+.rotate {
+  transform: rotate(180deg);
 }

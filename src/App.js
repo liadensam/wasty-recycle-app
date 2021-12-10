@@ -7,9 +7,8 @@ import {
 
 import Home from './components/Home';
 import Map from './components/Map';
+import Info from './components/Info';
 import About from './components/About';
-import Faq from './components/FAQ';
-import Contact from './components/Contact';
 import Intro from './components/Intro';
 import Tips from './components/Tips';
 import Directions from './components/Directions';
@@ -27,14 +26,9 @@ const App = () => {
         <Route path="/introslides" element={<IntroSlides />} />
         <Route path="/home" element={<Home />} />
         <Route path="/map" element={<Map/>} />
-        <Route path="/about" element={<About />} />
-        {/* faq - the json file needs to be mapped */}
-        <Route path="/faq" element={<Faq 
-        title="Question1" 
-        content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"/>} 
-        />
+        <Route path="/info" element={<Info/>} />
         <Route path="/tips" element={<Tips tipsArray = {tipsArray}/>} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
         <Route path="/directions" element={<Directions />} />
       </Routes>
     </BrowserRouter>
