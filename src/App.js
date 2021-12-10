@@ -21,26 +21,6 @@ import { tipsArray } from './components/Tips/tipsArray';
 const App = () => {
 
   return (
-<<<<<<< HEAD
-
-      <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Intro />} />
-            <Route path="/introslides" element={<IntroSlides />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/map" element={<Map/>} />
-            <Route path="/about" element={<About />} />
-            {/* faq - the json file needs to be mapped */}
-            <Route path="/faq" element={<Faq 
-            title="Question1" 
-            content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"/>} 
-            />
-            <Route path="/tips" element={<Tips tipsArray = {tipsArray}/>} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/directions" element={<Directions />} />
-          </Routes>
-      </BrowserRouter>
-=======
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Intro />} />
@@ -53,7 +33,6 @@ const App = () => {
         <Route path="/directions" element={<Directions />} />
       </Routes>
     </BrowserRouter>
->>>>>>> swipe
   );
 }
 
