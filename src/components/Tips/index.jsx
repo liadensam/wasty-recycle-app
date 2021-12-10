@@ -2,21 +2,24 @@ import React from 'react';
 
 import Tip from './tip.jsx'
 import Menu from '../../components/Menu';
+import imgIdea from './img/Idea.gif'
 
 const Tips = ({tipsArray}) => {
 
 	return (
     <>
     <Menu/>
-		<main>
-      {tipsArray.map((tip, index) => 
+    <img className="img-tips" src={imgIdea} alt=""/>
+		<main className="tips-container">
+      {tipsArray.map((item, index) => 
         <Tip
         key = {index}
-        name = {tip.name}
-        text = {tip.text}
+        name = {item.name}
+        text = {item.text}
       />)}
 
 		</main>
+   
 
     </>
 	);

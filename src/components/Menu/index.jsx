@@ -24,12 +24,11 @@ const Menu = () => {
   
   return (
 
-      <header>
+      <header className="menu-container">
         <div className={menuOpened === true? "menu" : "menu menu--closed"} >
           <div className="menu__buttons" >
-          {/* <button className="menu__btn--home" onClick={redirectToHome}></button> */}
 
-          <Hamburger className="menu__icon" direction="left" size={30} duration={0.4} distance="md" color="#000" rounded label="Show menu" 
+          <Hamburger className="menu__icon" direction="left" size={30} duration={0.4} distance="md" color="#fff" rounded label="Show menu" 
                 toggled={menuOpened} toggle={setMenuOpened} />
 
           {/* <Hamburger onToggle={toggled => {
@@ -44,10 +43,10 @@ const Menu = () => {
 
             <nav className={menuOpened === true? "menu__items" : "menu__items items--closed"} onClick={handleClick}>
               {/* <NavLink to="/home">Home</NavLink> */}
+               <NavLink className={classLink} to="/info">Info</NavLink>
+               <NavLink className={classLink} to="/tips">Tips</NavLink>
               <NavLink className={classLink} to="/about">About</NavLink>
-              <NavLink className={classLink} to="/faq">FAQ</NavLink>
-              <NavLink className={classLink} to="/tips">Tips</NavLink>
-              <NavLink className={classLink} to="/contact">Contact</NavLink>
+              {/* <NavLink className={classLink} to="/faq">FAQ</NavLink> */}
             </nav>
          
         </div>

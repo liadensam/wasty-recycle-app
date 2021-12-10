@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import SliderContent from "./SliderContent";
 import Dots from "./Dots";
 import "./style.scss";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+import { useNavigate } from 'react-router';
 import {imgData} from './utils/data'
 import { useSwipeable } from 'react-swipeable';
 // import { useDrag } from '@use-gesture/react'
