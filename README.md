@@ -4,6 +4,8 @@
 
 Dilka app is here to make the recycling process easier for people. It contains all the information you need about recycling and locations of the recyclinf stations in Reykjavik.
 
+![dilka-intro](https://user-images.githubusercontent.com/80709364/145803417-1d45632a-4c38-406b-8abf-6956ef655ed8.png)
+
 ## How does this app work?
 
 - Any button you click will redirect you to the map.
@@ -12,6 +14,8 @@ Dilka app is here to make the recycling process easier for people. It contains a
 - You can select the station you like and get the destination page overview with detailed information and button for getting directions to your google map.
 - The “find” button goes directly to the nearest recycle station to your current location.
 - For more information click on menu where you can read about tips how to recycle, what goes to each category and much more about our app.
+
+![mockup-dilka](https://user-images.githubusercontent.com/80709364/145803439-6725342e-8596-4eda-a931-0e449b80a916.png)
 
 ## APIs
 
