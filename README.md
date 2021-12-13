@@ -15,7 +15,7 @@ Dilka app is here to make the recycling process easier for people. It contains a
 - The “find” button goes directly to the nearest recycle station to your current location.
 - For more information click on menu where you can read about tips how to recycle, what goes to each category and much more about our app.
 
-![mockup-dilka](https://user-images.githubusercontent.com/80709364/145803439-6725342e-8596-4eda-a931-0e449b80a916.png)
+![mockup-dilka-sm](https://user-images.githubusercontent.com/80709364/145803971-a975242a-8029-408c-9f7b-69047a56a7d2.png)
 
 ## APIs
 
