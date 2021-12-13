@@ -1,3 +1,37 @@
+# Dilka recycle app
+
+> No time to waste
+
+Dilka app is here to make the recycling process easier for people. It contains all the information you need about recycling and locations of the recyclinf stations in Reykjavik.
+
+## How does this app work?
+
+- Any button you click will redirect you to the map.
+- At the map you can choose categories matching the rubbish you need to recycle.
+- After your selection is done, the map will show you stations with these materials. If you click on one of the stations, pop-up will appear informing you about particular bins at that station.
+- You can select the station you like and get the destination page overview with detailed information and button for getting directions to your google map.
+- The “find” button goes directly to the nearest recycle station to your current location.
+- For more information click on menu where you can read about tips how to recycle, what goes to each category and much more about our app.
+
+## APIs
+
+We were working on an application that is aiming to include more people into recycling process and make the recycle easier for the user at the same time. We were using your API (https://data-reykjavik.opendata.arcgis.com/datasets/endurvinnslug%C3%A1mar/api) and mapbox API.
+
+## Link to the files
+
+- [Trello board](https://trello.com/b/8Usnq9Vx/group-3-module)
+- [Miroboard](https://miro.com/app/board/o9J_ljIvRjw=/?invite_link_id=312987086755)
+- [Figma file](https://www.figma.com/file/gE52KkBcGDAnXKbwWJK02D/Recycle-app?node-id=286%3A5147)
+- [Figma second prototype](https://www.figma.com/proto/gE52KkBcGDAnXKbwWJK02D/Recycle-app?node-id=440%3A2115&scaling=scale-down&page-id=286%3A5147&starting-point-node-id=440%3A2115&show-proto-sidebar=1)
+
+Our app is made for the phone primary, as for now it is bette if you look at it through a dev tools through a phone screen size. We are working on responsivity right now, it will be updated here when it is done.
+
+- [Live site of the whole app](https://dilka-recycle-app.netlify.app/)
+- [Live site of a branch - how the style should look](https://dilka-styled-part.netlify.app/)
+- [GitHub Repository](https://github.com/liadensam/wasty-recycle-app)
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
