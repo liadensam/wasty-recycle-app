@@ -19,7 +19,7 @@ Dilka app is here to make the recycling process easier for people. It contains a
 
 ## APIs
 
-We were working on an application that is aiming to include more people into recycling process and make the recycle easier for the user at the same time. We were using your API (https://data-reykjavik.opendata.arcgis.com/datasets/endurvinnslug%C3%A1mar/api) and mapbox API.
+We were working on an application that is aiming to include more people into recycling process and make the recycle easier for the user at the same time. We were using Reykjavik city open data API (https://data-reykjavik.opendata.arcgis.com/datasets/endurvinnslug%C3%A1mar/api) and mapbox API.
 
 ## Link to the files
 
