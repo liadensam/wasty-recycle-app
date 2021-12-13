@@ -87,7 +87,7 @@ const Map = ({setHideMenu}) => {
 
   useEffect(() => {
     fetchBins();
-    setHideMenu(false)
+    // setHideMenu(false)
   }, []);
 
   const handleFilters = (event) => {
