@@ -105,12 +105,13 @@ const Map = ({setHideMenu}) => {
   useEffect(() => {
     if (filterArray.length) {   //if there are any filters chosen
       setFilteredBins(
-        bins.filter(bin =>     //filter all bin locations
+        bins?.filter(bin =>     //filter all bin locations
           filterArray.every(material => // by checking every filter category name
             bin[material] > 1))         // checking if the value of the property with this material name is bigger than 1 
 
         //bigger than one since all the values somehow are higher than 1 and just to prove that filtering works
 )} else { setFilteredBins(bins) }    //if there are no filters chosen - return all bin locations
+// eslint-disable-next-line
   }, [filterArray])   //update on any change in chosen filters
 
 
